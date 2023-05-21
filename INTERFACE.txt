@@ -1,0 +1,35 @@
+tryb f1 tylko ogladanie
+
+
+
+
+
+tryb f2 zaznaczanie, edycja kosci i przypisywanie wierzcholkow
+
+
+	Wciœniêty V - zaznaczanie/odznaczanie krawêdzi za pomoc¹ myszy
+	
+	Wciœniêty B - zaznaczanie/odznaczanie koœci za pomoc¹ myszy
+
+	klawisz A - ³¹czy zaznaczone wierzcholki z zaznaczona koœci¹
+
+
+	T translacja kosci
+	R rotacja kosci
+
+
+tryb f3 edycja animacji
+
+	T translacja kosci
+	R rotacja kosci
+	Right - przejœcie do nastêpnej klatki/dodanie nowej jeœli nie ma nastêpnej
+	Left - przejœcie do poprzedniej klatki
+	Z - w ostatniej klatce - deletowanie klatki
+	X - reset klatki
+	Left Mouse - zaznaczenie koœci
+	Right Mouse - odznaczenie koœci
+
+
+Ctrl + C - kopiuje klatkê
+Ctrl + V - wkleja klatkê
+Ctrl + E - eksport do pliku a3df

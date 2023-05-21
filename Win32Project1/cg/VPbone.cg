@@ -1,0 +1,31 @@
+struct VOutput 
+{
+  float4 position      : POSITION;
+  float2 texCoord      : TEXCOORD0; 
+};
+
+VOutput main
+(
+float4 position : POSITION,
+float3 texCoord : TEXCOORD0,
+uniform float4 boneMatrix[4*8],
+uniform float4x4 ModelViewProj
+)
+
+{
+  VOutput OUT;
+
+float4x4 boneMatrix2 = float4x4(
+boneMatrix[texCoord.z*4],
+boneMatrix[texCoord.z*4+1],
+boneMatrix[texCoord.z*4+2],
+boneMatrix[texCoord.z*4+3]
+);
+
+position  = mul( position, boneMatrix2 );
+
+
+OUT.position  = mul( position, ModelViewProj );
+OUT.texCoord  = texCoord;
+  return OUT;	
+}

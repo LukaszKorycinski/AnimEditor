@@ -1,0 +1,20 @@
+struct VOutput 
+{
+  float4 position      : POSITION;
+  float2 texCoord      : TEXCOORD0; 
+};
+
+VOutput main
+(
+float4 position : POSITION,
+float2 texCoord : TEXCOORD0,
+uniform float4x4 ModelViewProj
+)
+
+{
+  VOutput OUT;
+
+OUT.position  = mul( position, ModelViewProj );
+OUT.texCoord  = texCoord;
+  return OUT;	
+}

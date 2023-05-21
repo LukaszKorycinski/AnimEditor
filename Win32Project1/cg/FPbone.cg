@@ -1,0 +1,21 @@
+struct FOutput 
+{
+  float4 color    : COLOR;
+};
+
+FOutput main(
+float2 texCoord     : TEXCOORD0,
+uniform sampler2D tex1,
+uniform float colo
+)
+
+{
+ 	FOutput OUT;
+
+float4 texture = tex2D(tex1, texCoord);
+//float4 Alfa    = tex2D(alfa, texCoord);
+
+OUT.color = texture;//float4(0.0, 1.0, 0.0, 1.0);
+OUT.color.a+=colo;
+ return OUT;	
+}
